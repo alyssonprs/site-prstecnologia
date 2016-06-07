@@ -248,6 +248,7 @@ color: #ECEBEB;
 	color: #f8f8f8;
 	background: url(../img/header.jpg) no-repeat center center;
 	background-size: cover;
+	opacity: 0.9;
 	text-align: center;
 }
 
