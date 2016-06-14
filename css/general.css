@@ -316,6 +316,7 @@ color: #ECEBEB;
 	color: #f8f8f8;
 	background: url(../img/intro/banner-bg.jpg) no-repeat center center;
 	background-size: cover;
+	height: 400px;
 }
 
 /* Animate */
