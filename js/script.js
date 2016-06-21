@@ -64,11 +64,74 @@ $(document).ready(function() {
 					}
 			}
 		});
+
 		
-		$('#submit').click(function(){
-			
-			alert('asdsad');
+	$(function() {
+		$("#form-contato .buttonSubmit").click(function() {
+
+			var data = {
+				name: $("#InputName").val(),
+				email: $("#InputEmail").val(),
+				message: $("#InputMessage").val()
+			};
+
+			$.ajax({
+				type: "POST",
+				url: "contact.php",
+				data: data,
+				success: function(){
+					$('.success').fadeIn(1000);
+						toast();
+					}
+				});
+
+				return false;
+			});
 		});
+
 
 });
 
+
+
+	// inicio toast message
+	function toast(){
+    $(function () {
+        var i = -1;
+
+        var getMessage = function () {
+            var msgs = ['My name is Inigo Montoya. You killed my father. Prepare to die!'];
+            i++;
+            if (i === msgs.length) {
+                i = 0;
+            }
+
+            return msgs[i];
+        };
+
+        $('#submit').click(function () {
+            var shortCutFunction = $("#toastTypeGroup input:radio:checked").val();
+            var msg = $('#message').val();
+            var title = $('#title').val() || '';
+            var $showDuration = $('#showDuration');
+            var $hideDuration = $('#hideDuration');
+
+            if ($showDuration.val().length) {
+                toastr.options.showDuration = $showDuration.val();
+            }
+
+            if ($hideDuration.val().length) {
+                toastr.options.hideDuration = $hideDuration.val();
+            }
+
+            if (!msg) {
+                msg = getMessage();
+            }
+
+            var $toast = toastr[shortCutFunction](msg, title); // Wire up an event handler to a button in the toast, if it exists
+
+
+        });
+    })
+	// fim toast message
+}
