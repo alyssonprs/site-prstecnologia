@@ -81,7 +81,7 @@ $(document).ready(function() {
 				data: data,
 				success: function(){
 					$('.success').fadeIn(1000);
-						alert('email enviado');
+						$('#mensagemEmail').show();
 					}
 				});
 
