@@ -1061,6 +1061,11 @@ color: #ECEBEB;
 
 /* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
+		
+		.h1_home{
+			font-size: 350% !important;
+		}
+
 		.intro-header {
 			height: 100%;
 			padding-top: 50px;
@@ -1098,6 +1103,7 @@ color: #ECEBEB;
 	
 }
 @media screen and (max-width: 600px) {
+
 	.morph-button-modal.open .morph-content {
 		top: 0% !important;
 		left: 0% !important;

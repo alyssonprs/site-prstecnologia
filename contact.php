@@ -11,7 +11,13 @@ if(isset($_POST['email'])) {
  
         // your error code can go here
  
-        echo $error;
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+ 
+        echo "These errors appear below.<br /><br />";
+ 
+        echo $error."<br /><br />";
+ 
+        echo "Please go back and fix these errors.<br /><br />";
  
         die();
  
@@ -32,10 +38,10 @@ if(isset($_POST['email'])) {
     }
  
      
-    $name = $_POST['InputName'];
-    $email = $_POST['InputEmail'];
-    $message = $_POST['InputMessage'];
-
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+ 
  
     $email_message = "Form details below.\n\n";
  
