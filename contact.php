@@ -2,8 +2,12 @@
 
 if(isset($_POST['email'])) {
 
-    $email_to = "kaiqueleaodeveloper@gmail.com";
- 
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $email_to = "kaiqueleaodeveloper@gmail.com," . $email;
+
     $email_subject = "PRS Tecnologia - Contato";
 
  
@@ -37,14 +41,7 @@ if(isset($_POST['email'])) {
  
     }
  
-     
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
- 
-    $email_message = "Form details below.\n\n";
- 
-     
+    $email_message = "Form details below.\n\n"; 
  
     function clean_string($string) {
  
