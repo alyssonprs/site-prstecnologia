@@ -360,7 +360,7 @@
 						<div class="form-group">
 							<label for="InputMessage">Mensagem</label>
 							<div class="input-group">
-								<textarea required name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+								<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
 								<span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
 							</div>
 						</div>
@@ -369,8 +369,12 @@
 						
 						<br>
 						<br>
-						<div class="alert hide alert-success" id="mensagemEmail" role="alert">
-							<strong>Well done!</strong> You successfully read this important alert message.
+						<div class="alert alert-success " id="msg">
+							<button type="button" class="close close-alert" data-dismiss="alert">×</button>
+						</div>
+
+						<div class="alert alert-danger " id="msgError">
+							<button type="button" class="close close-alert" data-dismiss="alert">×</button>
 						</div>
 					</div>
 				</form>

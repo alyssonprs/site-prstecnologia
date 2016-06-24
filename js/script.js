@@ -14,6 +14,10 @@ $(window).load(function() {
 })
 
 $(document).ready(function() {
+
+		$('#msg').hide();
+		$('#msgError').hide();
+
 		//animated logo
 		$(".navbar-brand").hover(function () {
 			$(this).toggleClass("animated shake");
@@ -80,11 +84,14 @@ $(document).ready(function() {
 				url: "contact.php",
 				data: data,
 				success: function(){
-					$('.success').fadeIn(1000);
-						$('#mensagemEmail').show();
+          				$('#msg').html("E-mail enviado com sucesso!").fadeIn('slow') //also show a success message 
+           				$('#msg').delay(5000).fadeOut('slow');
+					},
+				error: function(){
+						$('#msgError').html("Por favor, preencha todas as informações para que o e-mail seja enviado.").fadeIn('slow') //also show a success message 
+           				$('#msgError').delay(5000).fadeOut('slow');
 					}
 				});
-
 				return false;
 			});
 		});
