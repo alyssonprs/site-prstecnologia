@@ -78,6 +78,14 @@ $(document).ready(function() {
 				email: $("#InputEmail").val(),
 				message: $("#InputMessage").val()
 			};
+			/* validando se todos os campos estao preenchidos */
+			if(data.name.trim() == null || data.name.trim() == "" ||
+			 	data.email.trim() == null || data.email.trim() == "" ||
+			 	data.message.trim() == null || data.message.trim() == ""){
+					$('#msgError').html("Por favor, preencha todas as informações para que o e-mail seja enviado.").fadeIn('slow') //also show a success message 
+           			$('#msgError').delay(5000).fadeOut('slow');		
+           			throw new Error("Os campos nao foram preenchidos");	
+			}
 
 			$.ajax({
 				type: "POST",

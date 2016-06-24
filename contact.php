@@ -4,7 +4,7 @@ if(isset($_POST['email'])) {
 
     $email_to = "kaiqueleaodeveloper@gmail.com";
  
-    $email_subject = "Website Contact";
+    $email_subject = "PRS Tecnologia - Contato";
 
  
     function died($error) {
@@ -41,7 +41,6 @@ if(isset($_POST['email'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
- 
  
     $email_message = "Form details below.\n\n";
  
