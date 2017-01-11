@@ -154,7 +154,7 @@ filter: alpha(opacity=95) !important;
 
 .button_down img {
 width: 50px;
-	
+	z-index: 100;
 }
 .btn-primary {
 	border-color: rgba(52, 73, 94, 0);
@@ -246,9 +246,24 @@ color: #ECEBEB;
 	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
 	padding-bottom: 50px;
 	color: #f8f8f8;
-	background: url(../img/intro/intro5.jpg) no-repeat center center;
-	background-size: cover;
+	background-color: #000;
 	text-align: center;
+}
+
+/**/
+#video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity:.25;
 }
 
 .intro-message {
